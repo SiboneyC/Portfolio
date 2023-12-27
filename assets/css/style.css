@@ -838,6 +838,10 @@ main {
   line-height: 1.6;
 }
 
+.publication-link {
+  color: var(--light-gray-70);
+}
+
 /**
  * skills 
  */
@@ -1188,6 +1192,12 @@ textarea.form-input::-webkit-resizer {
   .project-img,
   .blog-banner-box {
     height: auto;
+  }
+
+  .skills-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
   }
 }
 
