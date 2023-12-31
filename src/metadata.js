@@ -77,24 +77,39 @@ const EDUCATION = [
     uni: "The University of Texas at Austin",
     time: "August 2023 — May 2025",
     done: false,
-    text: "I am currently pursuing an Integrated Masters in Computer Science at UT Austin with an emphasis on Application and Systems design and programming. I will receive my bachelors and my masters together at the end of Spring 2025.",
+    texts: [
+      "I am currently pursuing an Integrated Masters in Computer Science at UT Austin with an emphasis on Application and Systems design and programming. I will receive my bachelors and my masters together at the end of Spring 2025.",
+    ],
   },
   {
     title: "B.S. in Mathematics",
     uni: "The University of Texas at Austin",
     time: "August 2021 — May 2024",
     done: false,
-    text: "I have finished all my course work for a B.S. in Mathematics with a specialization in Statistics and Applied Mathematics in Fall 2023. I expect to receive my diploma in May 2024.",
+    texts: [
+      "I have finished all my course work for a B.S. in Mathematics with a specialization in Statistics and Applied Mathematics in Fall 2023. I expect to receive my diploma in May 2024.",
+    ],
   },
   {
     title: "B.S. in Computer Science",
     uni: "The University of Texas at Austin",
     time: "August 2020 — May 2024",
     done: false,
-    text: "I was accepted into the competitve Computer Science program at UT Austin in Fall 2023. I have finished my undergraduate coursework as part of the Integrated Masters sequence in Spring 2023",
+    texts: [
+      "I was accepted into the competitve Computer Science program at UT Austin in Fall 2023. I have finished my undergraduate coursework as part of the Integrated Masters sequence in Spring 2023",
+    ],
   },
 ];
 
+/**
+ * Array of Experience objects
+ *
+ * Interface:
+ *  - title (position title)
+ *  - emp (employer)
+ *  - time (duration)
+ *  - texts (array of description texts)
+ */
 const EXPERIENCE = [
   {
     title: "Research Assistant and Research Mentor",
@@ -107,4 +122,27 @@ const EXPERIENCE = [
   },
 ];
 
-export { SOCIALS, INTERESTS, EDUCATION, EXPERIENCE };
+/**
+ * Array of Publication objects
+ *
+ * Interface:
+ *  - title (publication title)
+ *  - href (link to article)
+ *  - article (name of journal article)
+ *  - time (time of publication)
+ *  - texts (description)
+ */
+const PUBLICATION = [
+  {
+    title:
+      "Approximating Stellar Metallicity Using Photometric Machine Learning",
+    href: "https://iopscience.iop.org/article/10.3847/2515-5172/ac5f4e",
+    article: "Research Notes of AAS, Volume 6, Number 3, Article 57",
+    time: "March 2022",
+    texts: [
+      "I was the primary researcher for finding alternatives to spectroscopic data measurements. We used a random forest regressor that takes SDSS photometric color indices as input to produce stellar metallicity as output. The model achieved an RMSE similar to observations that can be made by studying low resolution spectra. This model subverts the problem of limited spectra, allowing metallicity measurements to be applied to several orders of magnitude more stars than previously possible.",
+    ],
+  },
+];
+
+export { SOCIALS, INTERESTS, EDUCATION, EXPERIENCE, PUBLICATION };

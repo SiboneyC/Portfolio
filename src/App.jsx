@@ -7,7 +7,13 @@ import Projects from "./components/Projects";
 import Rik from "./images/rik.jpg";
 
 // metadata
-import { SOCIALS, INTERESTS, EDUCATION, EXPERIENCE } from "./metadata";
+import {
+  SOCIALS,
+  INTERESTS,
+  EDUCATION,
+  EXPERIENCE,
+  PUBLICATION,
+} from "./metadata";
 
 function App() {
   // React hooks for state
@@ -69,7 +75,11 @@ function App() {
 
         {activePage === "about" && <About interests={INTERESTS} />}
         {activePage === "resume" && (
-          <Resume education={EDUCATION} experience={EXPERIENCE} />
+          <Resume
+            education={EDUCATION}
+            experience={EXPERIENCE}
+            publication={PUBLICATION}
+          />
         )}
         {activePage === "projects" && <Projects />}
       </div>
