@@ -1,6 +1,6 @@
 # Rik Ghosh - Personal Portfolio
 
-A personal portfolio website, built using Vanilla HTML, CSS, and JavaScript.
+A personal portfolio website, built using React.
 
 ## License
 
