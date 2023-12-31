@@ -130,7 +130,7 @@ const EXPERIENCE = [
  *  - href (link to article)
  *  - article (name of journal article)
  *  - time (time of publication)
- *  - texts (description)
+ *  - texts (array of description texts)
  */
 const PUBLICATION = [
   {
@@ -191,11 +191,18 @@ const LANGUAGE = [
   },
   {
     name: "TypeScript",
-    val: 55,
+    val: 65,
     level: "Proficient",
   },
 ];
 
+/**
+ * Array of Skill objects
+ *
+ * Interface:
+ *  - name (name of skill)
+ * - texts [OPTIONAL] (array of description texts)
+ */
 const SKILL = [
   {
     name: "Software Development",
