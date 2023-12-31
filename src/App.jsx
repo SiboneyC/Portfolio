@@ -6,21 +6,8 @@ import Resume from "./components/Resume";
 import Projects from "./components/Projects";
 import rik from "./images/rik.jpg";
 
-// Metadata
-const socials = [
-  {
-    link: "https://www.linkedin.com/in/rik-ghosh-939334205/",
-    logo: "linkedin",
-  },
-  {
-    link: "https://gitlab.com/RikGhosh487",
-    logo: "gitlab",
-  },
-  {
-    link: "https://github.com/RikGhosh487",
-    logo: "github",
-  },
-];
+// metadata
+import { SOCIALS, INTERESTS } from "./metadata";
 
 function App() {
   // React hooks for state
@@ -42,7 +29,7 @@ function App() {
       <Sidebar
         image={rik}
         alt="Image of Rik Ghosh (RG) against a white background, wearing a blue shirt"
-        socials={socials}
+        socials={SOCIALS}
       />
       <div className="main-content">
         <nav className="navbar">
@@ -80,7 +67,7 @@ function App() {
           </ul>
         </nav>
 
-        {activePage === "about" && <About />}
+        {activePage === "about" && <About interests={INTERESTS} />}
         {activePage === "resume" && <Resume />}
         {activePage === "projects" && <Projects />}
       </div>
