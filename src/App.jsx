@@ -4,10 +4,10 @@ import Sidebar from "./components/Sidebar";
 import About from "./components/About";
 import Resume from "./components/Resume";
 import Projects from "./components/Projects";
-import rik from "./images/rik.jpg";
+import Rik from "./images/rik.jpg";
 
 // metadata
-import { SOCIALS, INTERESTS } from "./metadata";
+import { SOCIALS, INTERESTS, EDUCATION, EXPERIENCE } from "./metadata";
 
 function App() {
   // React hooks for state
@@ -27,7 +27,7 @@ function App() {
   return (
     <main>
       <Sidebar
-        image={rik}
+        image={Rik}
         alt="Image of Rik Ghosh (RG) against a white background, wearing a blue shirt"
         socials={SOCIALS}
       />
@@ -68,7 +68,9 @@ function App() {
         </nav>
 
         {activePage === "about" && <About interests={INTERESTS} />}
-        {activePage === "resume" && <Resume />}
+        {activePage === "resume" && (
+          <Resume education={EDUCATION} experience={EXPERIENCE} />
+        )}
         {activePage === "projects" && <Projects />}
       </div>
     </main>

@@ -28,7 +28,7 @@ function About({ interests }) {
         <p>Feel free to contact me via my email!</p>
       </section>
 
-      {interests.length !== 0 && (
+      {Array.isArray(interests) && interests.length && (
         <section className="service">
           <h3 className="h3 service-title">Fields of Interest</h3>
           <ul class="service-list">

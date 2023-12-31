@@ -58,4 +58,53 @@ const INTERESTS = [
   },
 ];
 
-export { SOCIALS, INTERESTS };
+/**
+ * Array of Education objects
+ *
+ * Interface:
+ *  - title (degree title)
+ *  - uni (university)
+ *  - time (duration of degree)
+ *  - done (diploma received)
+ *  - text (degree description)
+ *
+ * Note:
+ * - New items must be entered sorted by time
+ */
+const EDUCATION = [
+  {
+    title: "M.S. in Computer Science",
+    uni: "The University of Texas at Austin",
+    time: "August 2023 — May 2025",
+    done: false,
+    text: "I am currently pursuing an Integrated Masters in Computer Science at UT Austin with an emphasis on Application and Systems design and programming. I will receive my bachelors and my masters together at the end of Spring 2025.",
+  },
+  {
+    title: "B.S. in Mathematics",
+    uni: "The University of Texas at Austin",
+    time: "August 2021 — May 2024",
+    done: false,
+    text: "I have finished all my course work for a B.S. in Mathematics with a specialization in Statistics and Applied Mathematics in Fall 2023. I expect to receive my diploma in May 2024.",
+  },
+  {
+    title: "B.S. in Computer Science",
+    uni: "The University of Texas at Austin",
+    time: "August 2020 — May 2024",
+    done: false,
+    text: "I was accepted into the competitve Computer Science program at UT Austin in Fall 2023. I have finished my undergraduate coursework as part of the Integrated Masters sequence in Spring 2023",
+  },
+];
+
+const EXPERIENCE = [
+  {
+    title: "Research Assistant and Research Mentor",
+    emp: "Freshman Research Initiative @ CNS",
+    time: "January 2021 — Present",
+    texts: [
+      "I lead a team of 3 peer research mentors in assisting over 40 students each semester in the research program to design, refine, and finalize their research.",
+      "I worked on a designing a machine learning model to process photometric data from astrophyics databases into spectroscopic measurements.",
+    ],
+  },
+];
+
+export { SOCIALS, INTERESTS, EDUCATION, EXPERIENCE };
