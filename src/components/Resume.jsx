@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Resume({ education, experience, publication }) {
+function Resume({ education, experience, publication, language, skill }) {
   return (
     <article className="resume active">
       <header>
@@ -113,6 +113,55 @@ function Resume({ education, experience, publication }) {
           </ol>
         </section>
       )}
+
+      {Array.isArray(language) && language.length && (
+        <section className="skill">
+          <h3 className="h3 skills-title">Programming Languages</h3>
+          <ul className="skills-list content-card">
+            {language.map((lang, idx) => (
+              <li
+                className="skills-item"
+                key={lang.toString() + idx.toString()}
+              >
+                <div className="title-wrapper">
+                  <h5 className="h5">{lang["name"]}</h5>
+                  <data value={lang["val"]}>{lang["level"]}</data>
+                </div>
+                <div className="skill-progress-bg">
+                  <div
+                    className="skill-progress-fill"
+                    style={{ width: `${lang["val"]}%` }}
+                  ></div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {Array.isArray(skill) && skill.length && (
+        <section className="skill">
+          <h3 className="h3 skills-title">Skills</h3>
+          <ul className="skills-list content-card">
+            {skill.map((skl, idx) => (
+              <li className="skills-item" key={skl.toString() + idx.toString()}>
+                <div className="title-wrapper">
+                  <h5 className="h5">{skl["name"]}</h5>
+                </div>
+                {skl["texts"] !== undefined &&
+                  skl["texts"].map((txt, i) => (
+                    <p
+                      className="timeline-text"
+                      key={txt.toString() + i.toString()}
+                    >
+                      {txt}
+                    </p>
+                  ))}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </article>
   );
 }
@@ -121,12 +170,16 @@ Resume.propTypes = {
   education: PropTypes.array,
   experience: PropTypes.array,
   publication: PropTypes.array,
+  language: PropTypes.array,
+  skill: PropTypes.array,
 };
 
 Resume.defaultProps = {
   education: [],
   experience: [],
   publication: [],
+  language: [],
+  skill: [],
 };
 
 export default Resume;

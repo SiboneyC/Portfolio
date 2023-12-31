@@ -145,4 +145,113 @@ const PUBLICATION = [
   },
 ];
 
-export { SOCIALS, INTERESTS, EDUCATION, EXPERIENCE, PUBLICATION };
+/**
+ * Array of Language objects
+ *
+ * Interface:
+ *  - name (language name)
+ *  - val (progress bar value)
+ *  - level (level of proficiency)
+ */
+const LANGUAGE = [
+  {
+    name: "JavaScript",
+    val: 80,
+    level: "Advanced",
+  },
+  {
+    name: "HTML",
+    val: 90,
+    level: "Advanced",
+  },
+  {
+    name: "CSS",
+    val: 80,
+    level: "Advanced",
+  },
+  {
+    name: "Java",
+    val: 80,
+    level: "Advanced",
+  },
+  {
+    name: "Python",
+    val: 90,
+    level: "Advanced",
+  },
+  {
+    name: "C++",
+    val: 60,
+    level: "Proficient",
+  },
+  {
+    name: "C",
+    val: 70,
+    level: "Proficient",
+  },
+  {
+    name: "TypeScript",
+    val: 55,
+    level: "Proficient",
+  },
+];
+
+const SKILL = [
+  {
+    name: "Software Development",
+    texts: [
+      "Experience with Software Development methodologies, tools, and frameworks: AGILE, CI/CD, React, Git, etc",
+    ],
+  },
+  {
+    name: "Data Migration, Deployment, and APIs",
+    texts: [
+      "Developing RESTful APIs, working with web frameworks, processing and coalescing large JSONs",
+    ],
+  },
+  {
+    name: "Database Management",
+    texts: [
+      "Experience with relational and non-relational databases and querying: SQL, PostgreSQL, MongoDB, SQLite",
+    ],
+  },
+  {
+    name: "Operating Systems",
+    texts: ["Experience with Linux and Windows OS along with shell scripting"],
+  },
+  {
+    name: "Networking",
+    texts: ["Experience with Network stack, custom NFS and TCP implemetations"],
+  },
+  {
+    name: "Communication",
+  },
+  {
+    name: "Time Management",
+  },
+  {
+    name: "Teamwork and Collaboration",
+  },
+  {
+    name: "Creativity",
+  },
+  {
+    name: "Problem Solving and Analytical Thinking",
+  },
+  {
+    name: "Adaptability and Resourcefulness",
+  },
+  {
+    name: "Leadership and Conflict Management",
+  },
+];
+
+export {
+  SOCIALS,
+  INTERESTS,
+  EDUCATION,
+  EXPERIENCE,
+  PUBLICATION,
+  LANGUAGE,
+  SKILL,
+};

@@ -13,6 +13,8 @@ import {
   EDUCATION,
   EXPERIENCE,
   PUBLICATION,
+  LANGUAGE,
+  SKILL,
 } from "./metadata";
 
 function App() {
@@ -79,6 +81,8 @@ function App() {
             education={EDUCATION}
             experience={EXPERIENCE}
             publication={PUBLICATION}
+            language={LANGUAGE}
+            skill={SKILL}
           />
         )}
         {activePage === "projects" && <Projects />}

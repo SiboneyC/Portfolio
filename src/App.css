@@ -846,11 +846,16 @@ main {
  */
 
 .skills-title {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .skills-list {
   padding: 20px;
+}
+
+.skills-item {
+  break-inside: avoid-column;
 }
 
 .skills-item:not(:last-child) {

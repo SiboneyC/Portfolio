@@ -31,7 +31,7 @@ function About({ interests }) {
       {Array.isArray(interests) && interests.length && (
         <section className="service">
           <h3 className="h3 service-title">Fields of Interest</h3>
-          <ul class="service-list">
+          <ul className="service-list">
             {interests.map((int, idx) => (
               <li
                 className="service-item"
