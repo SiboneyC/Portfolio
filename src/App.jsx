@@ -120,7 +120,9 @@ function App() {
             skill={SKILLS}
           />
         )}
-        {activePage === "projects" && <Projects />}
+        {activePage === "projects" && (
+          <Projects projects={pickRecents(PROJECTS)} />
+        )}
       </div>
     </main>
   );

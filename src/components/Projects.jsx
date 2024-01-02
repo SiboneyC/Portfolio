@@ -1,4 +1,6 @@
-function Projects() {
+import PropTypes from "prop-types";
+
+function Projects({ projects }) {
   return (
     <article className="about active">
       <header>
@@ -7,5 +9,13 @@ function Projects() {
     </article>
   );
 }
+
+Projects.propTypes = {
+  projects: PropTypes.array,
+};
+
+Projects.defaultProps = {
+  projects: [],
+};
 
 export default Projects;
