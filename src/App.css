@@ -653,7 +653,7 @@ main {
   pointer-events: all;
 }
 
-.testimonials-modal {
+.projects-modal {
   background: var(--eerie-black-2);
   position: relative;
   padding: 15px;
@@ -667,7 +667,7 @@ main {
   z-index: 2;
 }
 
-.modal-container.active .testimonials-modal {
+.modal-container.active .projects-modal {
   transform: scale(1);
   opacity: 1;
 }
@@ -705,6 +705,10 @@ main {
   box-shadow: var(--shadow-2);
 }
 
+.modal-avatar-box img {
+  width: 360px;
+}
+
 .modal-img-wrapper > img {
   display: none;
 }
@@ -725,6 +729,14 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+.modal-content p.data-desc {
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.modal-content p.read-more {
+  padding-top: 20px;
 }
 
 .clients {
@@ -1301,7 +1313,7 @@ main {
     padding: 20px;
   }
 
-  .testimonials-modal {
+  .projects-modal {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -1424,7 +1436,7 @@ main {
     --fs-8: 15px;
   }
 
-  .testimonials-modal {
+  .projects-modal {
     gap: 35px;
     max-width: 680px;
   }
