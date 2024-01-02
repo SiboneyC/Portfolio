@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function About({ interests }) {
+function About({ interests, recents }) {
   return (
     <article className="about active">
       <header>
@@ -51,16 +51,44 @@ function About({ interests }) {
           </ul>
         </section>
       )}
+
+      {Array.isArray(recents) && recents.length && (
+        <section className="recents">
+          <h3 className="h3 recents-title">Recent Projects</h3>
+          <ul className="recents-list has-scrollbar">
+            {recents.map((rec, idx) => (
+              <li
+                className="recents-item"
+                key={rec.toString() + idx.toString()}
+              >
+                <div className="content-card">
+                  <figure className="recents-avatar-box">
+                    <img src={rec["img"]} alt={rec["alt"]} width={60} />
+                  </figure>
+
+                  <h4 className="h4 recents-item-title">{rec["name"]}</h4>
+
+                  <div className="recents-text">
+                    <p>{rec["small_info"]}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </article>
   );
 }
 
 About.propTypes = {
   interests: PropTypes.array,
+  recents: PropTypes.array,
 };
 
 About.defaultProps = {
   interests: [],
+  recents: [],
 };
 
 export default About;

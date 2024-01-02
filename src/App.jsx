@@ -1,9 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+
+// components
 import Sidebar from "./components/Sidebar";
 import About from "./components/About";
 import Resume from "./components/Resume";
 import Projects from "./components/Projects";
+
+// image(s)
 import Rik from "./images/rik.jpg";
 
 // metadata
@@ -12,9 +16,10 @@ import {
   INTERESTS,
   EDUCATION,
   EXPERIENCE,
-  PUBLICATION,
-  LANGUAGE,
-  SKILL,
+  PUBLICATIONS,
+  LANGUAGES,
+  SKILLS,
+  PROJECTS,
 } from "./metadata";
 
 function App() {
@@ -30,6 +35,31 @@ function App() {
 
   const toggleActivePage = (pageName) => {
     setActivePage(pageName);
+  };
+
+  const pickRecents = (arr, slice = arr.length, filterField = undefined) => {
+    if (!Array.isArray(arr)) {
+      console.error("Incompatible argument type");
+      return undefined;
+    }
+
+    if (arr.length === 0) {
+      console.error("Empty array");
+      return undefined;
+    }
+
+    if (filterField !== undefined) {
+      arr = arr.filter((a) => a.hasOwnProperty(filterField));
+    }
+
+    return arr
+      .sort((a, b) => {
+        let dateA = Date.parse(a["date"]);
+        let dateB = Date.parse(b["date"]);
+        return dateA - dateB;
+      })
+      .reverse()
+      .slice(0, slice);
   };
 
   return (
@@ -75,14 +105,19 @@ function App() {
           </ul>
         </nav>
 
-        {activePage === "about" && <About interests={INTERESTS} />}
+        {activePage === "about" && (
+          <About
+            interests={INTERESTS}
+            recents={pickRecents(PROJECTS, 4, "links")} // show recent projects with links
+          />
+        )}
         {activePage === "resume" && (
           <Resume
             education={EDUCATION}
             experience={EXPERIENCE}
-            publication={PUBLICATION}
-            language={LANGUAGE}
-            skill={SKILL}
+            publication={PUBLICATIONS}
+            language={LANGUAGES}
+            skill={SKILLS}
           />
         )}
         {activePage === "projects" && <Projects />}
