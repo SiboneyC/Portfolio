@@ -358,7 +358,6 @@ const PROJECTS = [
       },
     ],
     links: [
-      "",
       "https://gitlab.com/RikGhosh487/exploreandgivemore",
       "https://documenter.getpostman.com/view/14067869/2s83Ycg2LW",
     ],
