@@ -32,7 +32,7 @@ function About({ interests, recents }) {
         <p>Feel free to contact me via my email!</p>
       </section>
 
-      {Array.isArray(interests) && interests.length && (
+      {Array.isArray(interests) && interests.length !== 0 && (
         <section className="service">
           <h3 className="h3 service-title">Fields of Interest</h3>
           <ul className="service-list">
@@ -56,7 +56,7 @@ function About({ interests, recents }) {
         </section>
       )}
 
-      {Array.isArray(recents) && recents.length && (
+      {Array.isArray(recents) && recents.length !== 0 && (
         <Fragment>
           <section className="recents">
             <h3 className="h3 recents-title">Recent Projects</h3>
@@ -66,7 +66,7 @@ function About({ interests, recents }) {
                   className="recents-item"
                   key={rec.toString() + idx.toString()}
                 >
-                  <div
+                  <button
                     className="content-card"
                     onClick={() => {
                       setModalActive(true);
@@ -80,7 +80,7 @@ function About({ interests, recents }) {
                     <div className="recents-text">
                       <p>{rec["small_info"]}</p>
                     </div>
-                  </div>
+                  </button>
                 </li>
               ))}
             </ul>

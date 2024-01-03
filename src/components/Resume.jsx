@@ -7,7 +7,7 @@ function Resume({ education, experience, publication, language, skill }) {
         <h2 className="h2 article-title">Resume</h2>
       </header>
 
-      {Array.isArray(education) && education.length && (
+      {Array.isArray(education) && education.length !== 0 && (
         <section className="timeline">
           <div className="title-wrapper">
             <div className="icon-box">
@@ -41,7 +41,7 @@ function Resume({ education, experience, publication, language, skill }) {
         </section>
       )}
 
-      {Array.isArray(experience) && experience.length && (
+      {Array.isArray(experience) && experience.length !== 0 && (
         <section className="timeline">
           <div className="title-wrapper">
             <div className="icon-box">
@@ -73,7 +73,7 @@ function Resume({ education, experience, publication, language, skill }) {
         </section>
       )}
 
-      {Array.isArray(publication) && publication.length && (
+      {Array.isArray(publication) && publication.length !== 0 && (
         <section className="timeline">
           <div className="title-wrapper">
             <div className="icon-box">
@@ -114,7 +114,7 @@ function Resume({ education, experience, publication, language, skill }) {
         </section>
       )}
 
-      {Array.isArray(language) && language.length && (
+      {Array.isArray(language) && language.length !== 0 && (
         <section className="skill">
           <h3 className="h3 skills-title">Programming Languages</h3>
           <ul className="skills-list content-card">
@@ -139,7 +139,7 @@ function Resume({ education, experience, publication, language, skill }) {
         </section>
       )}
 
-      {Array.isArray(skill) && skill.length && (
+      {Array.isArray(skill) && skill.length !== 0 && (
         <section className="skill">
           <h3 className="h3 skills-title">Skills</h3>
           <ul className="skills-list content-card">
