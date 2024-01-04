@@ -616,7 +616,7 @@ main {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow-y: auto;
   overscroll-behavior: contain;
   z-index: 20;
@@ -1074,8 +1074,15 @@ main {
 }
 
 .teams-list,
-.links-list {
+.links-list,
+.contribution-list,
+.info-txt {
   margin-bottom: 10px;
+}
+
+.contribution-item {
+  list-style-type: circle;
+  color: var(--white-1);
 }
 
 .modal-links {

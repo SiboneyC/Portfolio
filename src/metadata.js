@@ -275,7 +275,7 @@ const SKILLS = [
  *  - desc (description of the project)
  *  - type (project type)
  *  - small_info (small info for recents section)
- *  - info (larger info for projects page)
+ *  - info (array of info objects)
  *  - date (project start date)
  *  - img (image source for project)
  *  - alt (alternative text for image)
@@ -286,6 +286,9 @@ const SKILLS = [
  *  - name (name of team member)
  *  - link [OPTIONAL] (link to their page)
  *
+ * Info Interface:
+ *  - title (section title)
+ *  - text (section text)
  */
 const PROJECTS = [
   {
@@ -294,7 +297,25 @@ const PROJECTS = [
     type: "Systems",
     small_info:
       "A shell written in C, implemented on top of a custom libc for a 32-bit custom Linux-like OS virtualized by QEMU. I worked on implementing the PS/2 Keyboard drivers and the Ext2 File system.",
-    info: "",
+    info: [
+      {
+        title: "Summary",
+        text: "This project was a culmination of the semester-long assignments where I worked on implementing a 32-bit Linux-like Operating System from scratch using C++. Prior work on this project included implementing an Ext2 file system and virtual memory for running user-level programs. For this project, we had to implement an application that runs on top of the custom OS we implemented. This included adding several system calls and expanding the libc library. We decided to implement a shell that performs many BASH-like utility tasks. The shell also included a built-in text editor to support editing and making files.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Writing keyboard driver and setting up hardware interrupts for PS/2 Keyboard in QEMU",
+          "Adding system calls and functions to libc and implementing system side-support for them",
+          "Adding support for writes in Ext2 file system",
+          "Writing utility functions for C-Shell",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "This was a very informative experience for me and my fellow teammates. I learned how to write device drivers and how PICs work. I also learned a lot about system design and experimental computer science. This was also the first time I worked with a large group and understood the importance of proper communication and the need for continuous integration with git.",
+      },
+    ],
     date: "December 2021",
     img: seashell,
     alt: "A pink clam shell against a blue background. This is the name of the project and is supposed to be a play on the word C shell",
@@ -335,7 +356,25 @@ const PROJECTS = [
     type: "Web Development",
     small_info:
       "A city guide website with its own RESTful API implemented using React TypeScript (frontend) and Flask Python (backend). I was the project leader and the phase leader for the first phase.",
-    info: "",
+    info: [
+      {
+        title: "Summary",
+        text: "This project was a culmination of a semester-long assignment, where our team had to design a RESTful API comprised of 3 or more interconnected models, and an informative website that queried our API to render the different views. For this project, I was the project leader and decided to go with a city guide which connected cities to attractions and charities. This project involved both frontend and backend knowledge using several tools and frameworks. The website had over 5000 model instances and included rich media in the form of maps, images, reviews. Our API supports sortability and searchability for the instances.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Project Leader and Phase I Leader",
+          "Designed Attractions and Reviews templates for frontend",
+          "Designed API endpoints, sorting and filtering functionality for backend",
+          "Containerized the project",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "There was a lot to learn from this project. This was my first exposure to using React TypeScript and Python Flask. TypeScript was used for the front end, and Flask was used for the API. I also learned about Docker and containerization, Google Cloud Services and Amazon RDS for storing images and text data, using PostgreSQL, and AWS for hosting the website and the API. I also learned a lot of about unit testing, using Jest, Selenium, Python unit tests, and other testing frameworks in our CI/CD. Besides the technical skills, there was a lot to learn from writing technical reports and addressing user stories (stories from other teams where they would like us to implement a certain feature during the subsequent phases).",
+      },
+    ],
     date: "October 2022",
     img: explore,
     alt: "A city skyline and a moon against a dark blue background. This is the icon for the website for this project",
@@ -368,7 +407,25 @@ const PROJECTS = [
     type: "Applications",
     small_info:
       "An outfit planner written in React JavaScript that lets the user digitize their closet and plan outfits for events with weather suggestions. I worked on the event calendar and integrating planned outfits with events.",
-    info: "",
+    info: [
+      {
+        title: "Summary",
+        text: "This project involves designing a web application for a closet organizer and event outfit planner. The primary focus on designing this workable prototype was Human Computer Interaction semantics. The application features an outfit uploader, featuring a camera to take a picture and upload their items from the closet into the app's storage whilst adding tags and names for searchability, an outfit planner, where the added items can be grouped together to create an outfit, an event calendar, where an event can be created and an outfit can be attached to that event, and a user settings and preferences page. The application recommends certain outfits based on the weather conditions for the particular day of planning as well.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Designed wireframes and prototypes for the final design",
+          "Conducted A/B testing and within subjects studies to refine prototype design",
+          "Designed the calendar and event planner components",
+          "Worked on the Camera component and integrating it with Firebase for cloud storage",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "This project gave me a lot of insight regarding the design cycle and HCI techniques for informing prototype design. This project was mostly done using React JavaScript, and Material UI. I learned about using Firebase for storing images and login information, and how subject testing is conducted.",
+      },
+    ],
     date: "March 2023",
     img: pocket,
     alt: "A denim jeans with a heart on the back pocket hung up on a red hangar against a light blue background. This is the logo for the application",
@@ -386,10 +443,7 @@ const PROJECTS = [
         link: "https://github.com/rahuly0426",
       },
     ],
-    links: [
-      "https://malithyw.github.io/pocketcloset/",
-      "https://github.com/malithyw/pocketcloset",
-    ],
+    links: ["https://github.com/malithyw/pocketcloset"],
   },
   {
     name: "Tryston's Website",
@@ -397,7 +451,24 @@ const PROJECTS = [
     type: "Web Development",
     small_info:
       "A personal website for showcasing projects and games developed by Tryston Minsquero. I worked on the frontend JS and CSS, along with the boilerplate for ExpressJS",
-    info: "",
+    info: [
+      {
+        title: "Summary",
+        text: "I helped a friend implement his own personal website. This website features the games and projects Tryston has worked on,along with his resume and other information. The website uses ExpressJS for backend and Handlebars as the templating engine. The entire frontend is designed in vanilla JS and CSS. ShowdownJS is used to convert markdown into HTML, which is used by Tryston to render the dynamic content of the website.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Designed the Frontend UI using CSS and JavaScript",
+          "Provided boilerplates for ExpressJS and Handlebars",
+          "Implemented the contact form",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "Although it is more popular to use JavaScript frameworks for most websites, it was nice to go back to the roots and design a website using vanilla JS. I also got to work on AJAX for the contact form, which was something I hadn't done before. Working on this project, I also learned about tools such as ShowdownJS and EmailJS. Lastly, I learned about Heroku and deploying a website using Kaffine.",
+      },
+    ],
     date: "November 2022",
     img: tryston,
     alt: "A minimalist figure sketch of Tryston Minsquero wearing a black shirt against a white background. This is the logo for Tryston's website",
@@ -418,7 +489,23 @@ const PROJECTS = [
     type: "Web Development",
     small_info:
       "A personal website for showcasing university and personal projects along with a digitized resume, written in React JavaScript.",
-    info: "",
+    info: [
+      {
+        title: "Summary",
+        text: "This website is meant to showcase my projets and my technical skills and resume. It is almost entirely written in React JavaScript and uses GitHub pages for hosting. The website is fully responsive, and includes accessibility compliant code.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Component Design and structure",
+          "Designing UI using CSS",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "This project involved working with a lot of React hooks for state management. I also learned how to best optimize media queries for devices of different sizes. Lastly, almost all of the code is ARIA compliant, which was something I had to learn about.",
+      },
+    ],
     date: "December 2023",
     img: rik,
     alt: "A monogram showing R and G in black against a yellow background. These are the initials of Rik Ghosh and also the logo for this website",
@@ -433,7 +520,12 @@ const PROJECTS = [
     type: "Systems",
     small_info:
       "A custom thread pool written in C++ using C++20 Joinable threads and compared against popular C++ thread pools for performance using a series of benchmarks. I worked on the thread pool implementation and a few benchmarks.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "October 2023",
     img: cpp,
     alt: "The C++ poster logo against a black background. This project uses C++",
@@ -451,7 +543,12 @@ const PROJECTS = [
     type: "Systems",
     small_info:
       "A user-level ELF loader in C and ASM that parses the ELF binary and loads the loadable segments into appropriate memory locations before jumping to the starting instruction.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "October 2023",
     img: c,
     alt: "The C poster logo against a black background. This project uses C",
@@ -462,7 +559,12 @@ const PROJECTS = [
     type: "Networks",
     small_info:
       "A custom implementation of ICMP, ARP, and RIP in Java for communicating between two nodes over a simulated Virtual Network.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "October 2022",
     img: java,
     alt: "The Java poster logo against a black background. This project uses Java",
@@ -473,7 +575,12 @@ const PROJECTS = [
     type: "Applications",
     small_info:
       "A Random Forest Regressor in Python which approximates Stellar Metallicity with an RMSE of 0.024 using Photometric color indices from SDSS. My work in this field got published in the Research Notes of AAS.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "March 2022",
     img: metallicity,
     alt: "A globular cluster showing a spherical distribution of stars with varying brightness and color.",
@@ -491,7 +598,12 @@ const PROJECTS = [
     type: "Applications",
     small_info:
       "Two MLPs in Python for converting from SDSS color filters to GAIA color filters and vice versa. This utility tool is used by students at Geometry of Space Research group at UT Austin",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "June 2022",
     img: python,
     alt: "The Python poster logo against a black background. This project uses Python",
@@ -503,7 +615,12 @@ const PROJECTS = [
     type: "Machine Learning",
     small_info:
       "A PyTorch DNN for finding the center of a track in image frames from SuperTuxKart, and a custom controller that moves the kart towards the center of the track to autonomously drive the kart.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "April 2022",
     img: stk,
     alt: "Bold initials S T K for SuperTuxKart against a white background",
@@ -514,7 +631,12 @@ const PROJECTS = [
     type: "Systems",
     small_info:
       "A C REPL that uses Abstract Syntax Trees to parse and then evaluate simple expressions and assignments.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "February 2021",
     img: c,
     alt: "The C poster logo against a black background. This project uses C",
@@ -525,7 +647,12 @@ const PROJECTS = [
     type: "Systems",
     small_info:
       "A C malloc and umalloc (free) implementation for partitioning and growing the heap. The implementation support coalescing, and trying different fragmentation strategies for greater customizability of the heap usage.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "March 2021",
     img: c,
     alt: "The C poster logo against a black background. This project uses C",
@@ -536,7 +663,12 @@ const PROJECTS = [
     type: "Applications",
     small_info:
       "A discord bot written in JavaScript that performs simple moderation and utility tasks in a server. There are fun The Office themed functions that embody the personality of Dwight K. Schrute from The Office.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "February 2021",
     img: schrute,
     alt: "Silhouette images of Dwight Schrute from The Office on a White Claw inspired logo saying Dwight Claw Beet Seltzer",
@@ -548,7 +680,12 @@ const PROJECTS = [
     type: "Applications",
     small_info:
       "A discord bot written in JavaScript that allows users in the server to create a Twitch-like poll and then other users can spend their virtual currency to bet on a certain poll outcome.",
-    info: "",
+    info: [
+      {
+        title: "",
+        text: "",
+      },
+    ],
     date: "September 2021",
     img: betting,
     alt: "A logo showing the text Esports bets in white against a black background. This is the logo for the Discord bot.",

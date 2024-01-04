@@ -150,7 +150,26 @@ function Projects({ projects }) {
                     )}
                     <div className="data-model-text">
                       <p className="data-desc">{modalInfo["desc"]}</p>
-                      <p>{modalInfo["info"]}</p>
+                      {modalInfo["info"].map((info, i) => (
+                        <Fragment key={info.toString() + i.toString()}>
+                          <h4 className="h5">{info["title"]}</h4>
+                          {info["text"] !== undefined && (
+                            <p className="info-txt">{info["text"]}</p>
+                          )}
+                          {info["contributions"] !== undefined && (
+                            <ul className="contribution-list">
+                              {info["contributions"].map((con, j) => (
+                                <li
+                                  className="contribution-item"
+                                  key={con.toString() + j.toString()}
+                                >
+                                  <p>{con}</p>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </Fragment>
+                      ))}
                     </div>
                   </div>
                 </Fragment>
