@@ -475,7 +475,7 @@ const PROJECTS = [
     team: [
       {
         name: "Tryston Minsquero",
-        link: "https://github.com/TrystonMinsquero",
+        link: "https://trystonminsquero.com/linkedin",
       },
     ],
     links: [
