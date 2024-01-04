@@ -522,8 +522,20 @@ const PROJECTS = [
       "A custom thread pool written in C++ using C++20 Joinable threads and compared against popular C++ thread pools for performance using a series of benchmarks. I worked on the thread pool implementation and a few benchmarks.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "For this project we implemented our own C++ thread pool using C++20 Joinable threads and compared its performance against manual multithreading and other popular thread pools such as OneAPI TBB, BS thread pool, and Boost thread pool. The performance was measured using a series of micro-benchmarks.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Writing the Thread pool using C++20 Joinable Threads",
+          "Including an optimization for C++23 move-only functions",
+          "Designing micro-benchmarks",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "I learned a lot about experimental computer science and designing repeatable experiments. I also learned about joinable threads and how they differ from the regular threads. I also learned about the different thread pool implementations and some of the clever optimizations they use such as loop parallelization.",
       },
     ],
     date: "October 2023",
@@ -545,8 +557,20 @@ const PROJECTS = [
       "A user-level ELF loader in C and ASM that parses the ELF binary and loads the loadable segments into appropriate memory locations before jumping to the starting instruction.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "For this project I used implemented a program loader and pager as a user-level program. This program reads an ELF binary and then uses the static virtual addresses to allocate sufficient memory to load the loadable segments of the program. The loader has three different settings. The all-at-once loader loads every program segment at once. The demand pager loads a page at a time, when a page-fault occurs. The hybrid pager loads multiple pages using a custom formula at each page-fault.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Designed the all-at-once program loader",
+          "Implemented signal handlers for demand paging",
+          "Designed custom formula for hybrid paging",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "I learned about signal handlers and implementing demand paging from a user program. I also learned about the details of the ELF binary and how programs get loaded and executed in Linux.",
       },
     ],
     date: "October 2023",
@@ -561,8 +585,20 @@ const PROJECTS = [
       "A custom implementation of ICMP, ARP, and RIP in Java for communicating between two nodes over a simulated Virtual Network.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "This project including implementing ICMP, ARP, and RIP in Java for a simulated Virtual Network. These components were built on top of the floodlight controller using several different network topologies.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Implemented ICMP for ping",
+          "Implemented ARP for communication between nodes in a switch network",
+          "Implemented RIP for updating routing tables in a large network",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "I learned how ICMP, ARP, and RIP is implemented and how nodes in a switched network communicate in the IP layer.",
       },
     ],
     date: "October 2022",
@@ -577,8 +613,19 @@ const PROJECTS = [
       "A Random Forest Regressor in Python which approximates Stellar Metallicity with an RMSE of 0.024 using Photometric color indices from SDSS. My work in this field got published in the Research Notes of AAS.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "This was part of my research for the Freshman Research Initiative at UT Austin. This program is a Random Forest Regressor that takes 4 color indices from SDSS of stellar objects and regresses to a stellar metallicity value. Metallicity requires spectroscopic data, which is not as abundant as photometric data. Therefore, this program allows the computation of metallicity of stars that lack spectroscopic data. I have a paper published in the Research Notes of AAS regarding this project.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Wrote the Random Forest Regressor",
+          "Implemented visualizations for model output",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "I learned about the scikit-learn package and SQL for querying the SDSS data base. I also ended up learning about the process of getting a paper published in a scientific journal.",
       },
     ],
     date: "March 2022",
@@ -600,8 +647,21 @@ const PROJECTS = [
       "Two MLPs in Python for converting from SDSS color filters to GAIA color filters and vice versa. This utility tool is used by students at Geometry of Space Research group at UT Austin",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "This is a utility tool for converting the color indicies from one popular astronomy database to another and vice versa. The tool uses two Multilayer Perceptrons written using PyTorch. This tool is used by students in the FRI program till date.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Collected data from SDSS and GAIA data bases",
+          "Designed MLP architecture for both models",
+          "Trained and Validated models for accuracy",
+          "Wrote a detailed API for future users of the models",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "I learned how to design MLPs in PyTorch. I read about a lot of optimization functions and regularization options before deciding which one to pick.",
       },
     ],
     date: "June 2022",
@@ -617,8 +677,20 @@ const PROJECTS = [
       "A PyTorch DNN for finding the center of a track in image frames from SuperTuxKart, and a custom controller that moves the kart towards the center of the track to autonomously drive the kart.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "This project involved designing a UNet CNN that looks at frames from the SuperTuxKart game on several different race tracks and uses segmentation to identify the center of a race track so that a controller can instruct the kart to drive towards the center and stay on the track to complete the race. Each race track had a certain time limit and the goal was to design a Neural Network that can guide the controller to beat that time.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Gathered the training data from SuperTuxKart",
+          "Designed the UNet CNN architecture",
+          "Designed the controller for driving the kart",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "I learned about the UNet architecture and how one-hot encoding works. I explored differnt architectures and hyperparameters before coming up with the final product.",
       },
     ],
     date: "April 2022",
@@ -633,8 +705,21 @@ const PROJECTS = [
       "A C REPL that uses Abstract Syntax Trees to parse and then evaluate simple expressions and assignments.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "This REPL uses Abstract Syntax Trees to proecss expressions and store variables. Each character is tokenized by a tokenizer and then gets parsed by a parser, contructing the AST. Then the evaluator decomposes the AST to produce the output.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Implemented the Tokenizer",
+          "Implemented the Parser",
+          "Implemented the Evaluator",
+          "Added support for creating and storing variables",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "This was my first program with C. I learned about Makefiles and combining several C files into a single program. I also learned about the compile and linker phases of program creation.",
       },
     ],
     date: "February 2021",
@@ -649,8 +734,21 @@ const PROJECTS = [
       "A C malloc and umalloc (free) implementation for partitioning and growing the heap. The implementation support coalescing, and trying different fragmentation strategies for greater customizability of the heap usage.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "In this project, I implemented my custom heap allocator. The program maintains a free list and finds appropriate memory segments from the list to service malloc requests. Passing a certain flag allows the free list to be coalesced. There are different finding algorithms such as first-fit, and best-fit which can be specified as flags to the malloc function. Each allocated block contains metadata in the header and the footer for memory management.",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Implementing the heap data structure for memory management",
+          "Implementing the malloc function",
+          "Implementing the free function",
+          "Implementing the coalescing",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "I learned how the heap works in C and the system calls used for acquiring and freeing memory. I also learned about the different search algorithms for finding free blocks to service malloc requests and how and when to coalesce for optimal performance.",
       },
     ],
     date: "March 2021",
@@ -665,8 +763,21 @@ const PROJECTS = [
       "A discord bot written in JavaScript that performs simple moderation and utility tasks in a server. There are fun The Office themed functions that embody the personality of Dwight K. Schrute from The Office.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: "This is a discord bot that was initially created for profanity filtering. In subsequent updates lots of fun features were added to learn about The Office trivia, play sound tracks, and feature mini games. The bot is designed to act like Dwight Schrute from The Office and is capable of joining voice channels to play audio tracks, using Discord embeds to recommend episodes from The Office, and play hangman",
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Designing the profanity detection and moderation system",
+          "Adding the feature to play music and audio tracks in a voice channel",
+          "Adding an episode recommendation feature",
+          "Adding mini games to the bot",
+        ],
+      },
+      {
+        title: "What I Learned",
+        text: "This was my first project with DiscordJS. I learned about the API and how to use asynchronous functions. I started the bot with a very simple functionality and gradually added more features that other server members wanted to see. This included experimenting with audio files, adding embedded messages, and including mini games.",
       },
     ],
     date: "February 2021",
@@ -682,8 +793,20 @@ const PROJECTS = [
       "A discord bot written in JavaScript that allows users in the server to create a Twitch-like poll and then other users can spend their virtual currency to bet on a certain poll outcome.",
     info: [
       {
-        title: "",
-        text: "",
+        title: "Summary",
+        text: 'This bot features a Twitch-inspired polling mechanism for members in a Discord server. Anyone can create a poll and pick a time period after which the poll will expire, and other members can "bet" on the choices by using a virtual currency tracked by the bot. After the time expires, the bot provides the outcome of the poll, and the members who picked the winning choice get awarded some of the virtual currency. Currency gets replenished every week.',
+      },
+      {
+        title: "Contributions",
+        contributions: [
+          "Designing the polling mechanism and poll creation",
+          "Implementing timer controls for the bot",
+          "Adding and maintaining state for members of a Discord server",
+        ],
+      },
+      {
+        title: "What I learned",
+        text: "This was the first Discord bot I worked on that used timer controls. Using time-sensitive events was a new experience for me to learn. I also learned about keeping track of state for each member of a server.",
       },
     ],
     date: "September 2021",
