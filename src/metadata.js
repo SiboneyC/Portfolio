@@ -131,7 +131,7 @@ const EXPERIENCE = [
     time: "January 2021 — Present",
     texts: [
       "I lead a team of 3 peer research mentors in assisting over 40 students each semester in the research program to design, refine, and finalize their research.",
-      "I worked on a designing a machine learning model to process photometric data from astrophyics databases into spectroscopic measurements.",
+      "I worked on designing a machine learning model to process photometric data from astrophysics databases into spectroscopic measurements.",
     ],
   },
 ];

@@ -1,9 +1,38 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 function Projects({ projects }) {
   const [modalActive, setModalActive] = useState(false);
   const [modalInfo, setModalInfo] = useState(undefined);
+  const [projectsActive, setProjectsActive] = useState(projects);
+  const [category, setCategory] = useState("");
+  const [dropDownActive, setDropDownActive] = useState(false);
+
+  // update views for filtered projects
+  useEffect(() => {
+    const updateCategory = () => {
+      if (category === "All") {
+        setProjectsActive(projects);
+      } else {
+        setProjectsActive(projects.filter((item) => item["type"] === category));
+      }
+    };
+
+    if (category !== "") {
+      updateCategory();
+    }
+  }, [category, projects]);
+
+  const getCategories = (projs) => {
+    let categorySet = new Set();
+    for (let project of projs) {
+      categorySet.add(project["type"]);
+    }
+
+    let categoryArray = [...categorySet];
+    categoryArray.unshift("All");
+    return categoryArray;
+  };
 
   const processLinks = (link) => {
     if (link.includes("github.io")) {
@@ -58,8 +87,38 @@ function Projects({ projects }) {
       {Array.isArray(projects) && projects.length !== 0 && (
         <Fragment>
           <section className="projects">
+            <div className="filter-select-box">
+              <button
+                className={`filter-select ${dropDownActive ? "active" : ""}`}
+                onClick={() => setDropDownActive(!dropDownActive)}
+              >
+                <div className="select-value">
+                  {category === "" ? "Select Category" : category}
+                </div>
+                <div className="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+              <ul className="select-list">
+                {getCategories(projects).map((item, idx) => (
+                  <li
+                    className="select-item"
+                    key={item.toString() + idx.toLocaleString()}
+                  >
+                    <button
+                      onClick={() => {
+                        setCategory(item);
+                        setDropDownActive(false);
+                      }}
+                    >
+                      {item}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <ul className="project-list">
-              {projects.map((pro, idx) => (
+              {projectsActive.map((pro, idx) => (
                 <li
                   className="project-item active"
                   key={pro.toString() + idx.toString()}

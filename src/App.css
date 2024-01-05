@@ -1472,10 +1472,6 @@ main {
     padding-bottom: 20px;
   }
 
-  .filter-select-box {
-    display: none;
-  }
-
   .filter-list {
     display: flex;
     justify-content: flex-start;
