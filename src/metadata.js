@@ -131,7 +131,7 @@ const EXPERIENCE = [
     time: "January 2021 — Present",
     texts: [
       "I lead a team of 3 peer research mentors in assisting over 40 students each semester in the research program to design, refine, and finalize their research.",
-      "I worked on designing a machine learning model to process photometric data from astrophysics databases into spectroscopic measurements.",
+      "I designed a machine learning model to process photometric data from astrophysics databases into spectroscopic measurements.",
     ],
   },
 ];
@@ -812,7 +812,7 @@ const PROJECTS = [
     date: "September 2021",
     img: betting,
     alt: "A logo showing the text Esports bets in white against a black background. This is the logo for the Discord bot.",
-    links: [""],
+    links: ["https://github.com/RikGhosh487/Betting-Bot"],
   },
 ];
 
