@@ -29,7 +29,7 @@ import betting from "./images/betting-bot.jpg";
  */
 const SOCIALS = [
   {
-    link: "https://www.linkedin.com/in/rik-ghosh-939334205/",
+    link: "https://www.linkedin.com/in/rikghosh/",
     logo: "linkedin",
   },
   {
@@ -92,7 +92,16 @@ const EDUCATION = [
     time: "August 2023 — May 2025",
     done: false,
     texts: [
-      "I am currently pursuing an Integrated Masters in Computer Science at UT Austin with an emphasis on Application and Systems design and programming. I will receive my bachelors and my masters together at the end of Spring 2025.",
+      "I am currently pursuing an Integrated Master's degree in Computer Science at UT Austin, specializing in Application and Systems Design and Programming. This program integrates both undergraduate and graduate coursework, culminating in the conferral of both a Bachelor's and Master's degree upon completion in Spring 2025.",
+    ],
+  },
+  {
+    title: "B.S. in Computer Science",
+    uni: "The University of Texas at Austin",
+    time: "August 2020 — May 2025",
+    done: false,
+    texts: [
+      "Completed a rigorous Bachelor's degree coursework in Computer Science in just three years, demonstrating a strong commitment to academic excellence and efficiency. Proficient in a diverse array of tools and technologies including embedded systems programming, AWS, React, Docker, and PyTorch, enabling me to tackle complex challenges and deliver innovative solutions. This degree will be conferred with my Master of Science in Computer Science in May 2025.",
     ],
   },
   {
@@ -101,16 +110,7 @@ const EDUCATION = [
     time: "August 2021 — May 2024",
     done: false,
     texts: [
-      "I have finished all my course work for a B.S. in Mathematics with a specialization in Statistics and Applied Mathematics in Fall 2023. I expect to receive my diploma in May 2024.",
-    ],
-  },
-  {
-    title: "B.S. in Computer Science",
-    uni: "The University of Texas at Austin",
-    time: "August 2020 — May 2024",
-    done: false,
-    texts: [
-      "I was accepted into the competitve Computer Science program at UT Austin in Fall 2023. I have finished my undergraduate coursework as part of the Integrated Masters sequence in Spring 2023",
+      "Graduating in May 2024 with a Bachelor of Science in Mathematics, I have immersed myself in a comprehensive curriculum that blends theoretical rigor with practical applications. My coursework has encompassed advanced topics in statistics and applied mathematics. Additionally, I have delved into the depths of abstract mathematics through rigorous proof-based courses in algebraic structures, complex analysis, and real analysis.",
     ],
   },
 ];

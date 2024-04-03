@@ -14,19 +14,44 @@ function About({ interests, recents }) {
       <section className="about-text">
         <p>
           Hi I'm Rik! This is my personal website where you can find some of the
-          projects I've worked on along with my resume. I'm a student in the
-          College of Natural Sciences at UT Austin pursuing an integrated
-          masters in Computer Science with specialization in applications and
-          systems development. I also have a degree in Mathematics with an
-          emphasis in statistics and applications.
+          projects I've worked on along with my resume.
         </p>
 
         <p>
-          I am currently looking for full-time positions for software
-          development, data analysis, data science, or systems programming that
-          allow me to continue learning and developing as a computer scientist
-          alongside a team of some of the best professionals in the field in
-          order to gain more practical experiences and industrial exposure.
+          I am an enthusiastic and driven Computer Science graduate with a solid
+          foundation in Mathematics, specializing in Statistics and Applied
+          Mathematics. Currently pursuing an Integrated Masters in Computer
+          Science at UT Austin's College of Natural Sciences, focusing on
+          Applications and Systems development.
+        </p>
+
+        <p>
+          I am passionate about leveraging technology to solve complex problems
+          and am eager to contribute my skills to a dynamic team. With a keen
+          interest in software development, data analysis, data science, and
+          systems programming, I am actively seeking full-time opportunities
+          that will allow me to further develop as a computer scientist while
+          collaborating with industry leaders.
+        </p>
+
+        <p>
+          My academic background, combined with hands-on experience in various
+          programming languages and analytical tools, equips me to tackle
+          challenges head-on and drive innovation. I am committed to continuous
+          learning and thrive in environments that foster growth and
+          collaboration.
+        </p>
+
+        <p>
+          I am excited about the prospect of joining a forward-thinking
+          organization where I can apply my expertise, learn from seasoned
+          professionals, and make meaningful contributions to impactful
+          projects.
+        </p>
+
+        <p>
+          Let's connect and explore how my skills and aspirations align with
+          your team's objectives.
         </p>
 
         <p>Feel free to contact me via my email!</p>
