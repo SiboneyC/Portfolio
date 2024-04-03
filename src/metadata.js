@@ -816,6 +816,19 @@ const PROJECTS = [
   },
 ];
 
+/**
+ * @todo need to implement this for future edition
+ * Array of Certificate Objects
+ *
+ * Interface:
+ *  - name (name of the certificate)
+ *  - date (date the certificate was issued)
+ *  - link [OPTIONAL] (link to the certificate)
+ *  - org (issuing organization)
+ *  - skills (array of Skill objects)
+ */
+const CERTIFICATIONS = [{}];
+
 export {
   SOCIALS,
   INTERESTS,
