@@ -827,20 +827,7 @@ const PROJECTS = [
  *  - org (issuing organization)
  *  - skills (array of Skill objects)
  */
-const CERTIFICATIONS = [
-  {
-    name: "",
-    date: "",
-    link: "",
-    org: "",
-    skills: [
-      {
-        name: "",
-        texts: [""],
-      },
-    ],
-  },
-];
+const CERTIFICATIONS = [{}];
 
 export {
   SOCIALS,
