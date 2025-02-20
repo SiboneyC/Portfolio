@@ -1,4 +1,4 @@
-# Rik Ghosh - Personal Portfolio
+# Siboney Cardoso - Personal Portfolio
 
 A personal portfolio website, built using React.
 
